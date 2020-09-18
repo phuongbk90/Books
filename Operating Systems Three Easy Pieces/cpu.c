@@ -3,15 +3,19 @@
 #include <stdlib.h>
 #include <sys/time.h>
 #include <unistd.h>
+
 #include "common.h"
 
-int main(int argc, char *argv[]) {
-  if (argc != 2) {
+int main(int argc, char *argv[])
+{
+  if (argc != 2)
+  {
     fprintf(stderr, "usage: cpu <string>\n");
     exit(EXIT_FAILURE);
   }
   char *str = argv[1];
-  while (1) {    
+  while (1)
+  {
     // sleep(3);
     spin(1);
     printf("%s\n", str);
